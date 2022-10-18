@@ -1,0 +1,30 @@
+###
+GET http://localhost:{{port}}{{baseUrl}}/unit
+
+###
+POST http://localhost:{{port}}{{baseUrl}}/unit/
+Content-Type: application/json
+
+{
+"name": "8",
+"symbol": "w"
+}
+
+###
+GET http://localhost:{{port}}{{baseUrl}}/counter/
+
+###
+POST http://localhost:{{port}}{{baseUrl}}/counter/
+Content-Type: application/json
+
+{
+  "name": "Car1",
+  "measureUnit": {
+    "id": 1,
+    "name": "Kilomètre",
+    "symbol": "km"
+  }
+}
+
+###
+GET http://localhost:{{port}}{{baseUrl}}/counter/1/values/
